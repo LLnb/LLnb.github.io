@@ -1,18 +1,18 @@
-server:
-  port: 6666
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7001/eureka
-  instance:
-    prefer-ip-address: true
 spring:
-  application:
-    name: spring-cloud-config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/hpyao/microservice-config.git
-          username: hpyao
-          password: Itsource20180731
+	  profiles:
+	    active:
+	    - dev
+	---
+	server: 
+	  port: 3355
+	spring:
+	  profiles: dev #开发环境
+	  application:
+	    name: MICROSERVICE-USER-DEV
+	---
+	server: 
+	  port: 3355
+	spring:
+	  profiles: test #测试环境
+	  application:
+	    name: MICROSERVICE-USER-TEST
