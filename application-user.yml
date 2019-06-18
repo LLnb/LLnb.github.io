@@ -1,18 +1,20 @@
 spring:
-	  profiles:
-	    active:
-	    - dev
-	---
-	server: 
-	  port: 3355
-	spring:
-	  profiles: dev #开发环境
-	  application:
-	    name: MICROSERVICE-USER-DEV
-	---
-	server: 
-	  port: 3355
-	spring:
-	  profiles: test #测试环境
-	  application:
-	    name: MICROSERVICE-USER-TEST
+ profiles:
+   active:
+   - dev
+---
+server: 
+ port: 33
+ 
+spring:
+ profiles: dev #开发环境
+ application:
+   name: MICROSERVICE-USER-DEV
+---
+server: 
+  port: 3355
+spring:
+  profiles: test #测试环境
+  application:
+    name: MICROSERVICE-USER-TEST
+
